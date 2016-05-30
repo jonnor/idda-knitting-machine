@@ -9,6 +9,8 @@ but also be adaptable to make different fabric sizes and using different materia
 As a side-effect of developing, we're also creating replacement parts and modifications
 for existing commercial units, as well as tools that are useful for any kind of (circular knitting) machine.
 
+![Generic circular knitting machine modified for automation using 3d-printed parts](./doc/automated-machine-mod-small.png)
+
 # Status
 **Prototyping**
 
