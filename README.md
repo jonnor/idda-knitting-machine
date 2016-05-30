@@ -56,17 +56,18 @@ Later
 Idda is primarily licensed under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 By providing pull requests you agree that your work can be distributed this license.
 
-**Note that some files are currently derivatives of files licensed as CC-BY-SA**, and are thus also under CC-BY-SA.
-
+Note that **some files are currently derivatives of files licensed as CC-BY-SA**, and are thus also under CC-BY-SA.
 
 You are free to:
+
 ```
     Share — copy and redistribute the material in any medium or format
     Adapt — remix, transform, and build upon the material - for any purpose, even commercially.
 
     The licensor cannot revoke these freedoms as long as you follow the license terms.
 ```
-    Under the following terms:
+
+Under the following terms:
 ```
     Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made.
     You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
@@ -148,14 +149,57 @@ Debugging & Maintenance
 
 ## Teardown
 
-Of a cheap China clone from China.
-Looks to be identical to the "new Singer".
+Following is a quick teardown of the internals of a commercial circular knitting machine. In particular
+[BangGood: DIY scarf hat knitting machine](http://www.banggood.com/Creative-DIY-Scarf-Hat-Quick-Knitting-Machine-Handheld-Handwork-Weaving-Tool-for-Adult-Child-p-1030934.html),
+purchased for testing on May 03 2016 for 30 EUR.
 
-`TODO: post pictures/video`
+The mechanisms found here are expected to be representative, or nearly identical to most of the other machines.
 
-* Mechanical principle
-* Needle guide
-* Stopper for plain-knit
+### Mechanical principle
+
+![Top removed](./doc/teardown/topremoved.jpg)
+
+![Top removed](./doc/teardown/cylinder-needleguide.jpg)
+
+![Top removed](./doc/teardown/bevelgear.jpg)
+
+* A bevel gear connects the hand-crank axel to the inner unit (seen externally as green, some internal parts in grey-white).
+* The inner unit contains 22 needles, each in a compartment that constains movement to up/down
+* The body which the inner unit rotates in, has a track which the needles follow
+* As you turn the crank, the inner unit rotates
+* A needles are rotated around to come to the thread insertion point, the track causes them to raise - catching the thread - and then lower again
+* ...
+
+
+### Needle track
+
+![Needle track formed by two pieces](./doc/teardown/track.jpg)
+
+![Needle in its track](./doc/teardown/track-withneedle.jpg)
+
+The scissoring action caused by the inner and outer track parts is smart,
+as it minimizes contact surface and thus friction.
+
+Similar two-point connection was found in the axel connector for the crank.
+
+### Plain knit stopper
+
+![Switch for plain knitting](./doc/teardown/plainknit-switch.jpg)
+
+![Plainknit stops some needles from each end](./doc/teardown/plainknit-hysteresis.jpg)
+
+* A lever allows to switch between 'tube knit' and 'plain knit'
+* With plain knit, stoppers for rotation is enabled
+* Have to knit forward to stop, then backward to stop, and so on
+
+### Needle
+
+![Needle](./doc/teardown/needle.jpg)
+
+![Top ring with some needles](./doc/teardown/topring.jpg)
+
+....
+
 
 ## Mods
 
@@ -295,8 +339,6 @@ References
 ----------
 
 * [Replacement needles](http://www.amazon.com/Express-Knitting-Machine-Replacement-Needles/dp/B004T2MHVA) for Adda Express
-* [BangGood: DIY scarf hat knitting machine](http://www.banggood.com/Creative-DIY-Scarf-Hat-Quick-Knitting-Machine-Handheld-Handwork-Weaving-Tool-for-Adult-Child-p-1030934.html),
-a cheap copy (30 USD) with 22 needles. I purchased one of these for testing on May 03 2016.
 * [Listing of different circular knitting machines](http://www.kobakant.at/DIY/?p=1144).
 [PRYM 624170 Strickmühle MAXI](http://www.amazon.de/PRYM-624170-Strickm%C3%BChle-MAXI/dp/B000VKFJ32/ref=sr_1_4?ie=UTF8&s=garden&qid=1245759008&sr=8-4) seems to be the cheapest 44 needle, at around 50 EUR.
 * Barbie / Mattel also has a [circular knitting machine](https://www.flickr.com/photos/plusea/3675240262)
