@@ -14,9 +14,9 @@ for existing commercial units, as well as tools that are useful for any kind of 
 # Status
 **Prototyping**
 
-* Teardown of a commercial unit has been performed
-* A functional crank and motor attachment for automated knitting has been tested with existing commercial unit
-* *Untested 3d-models* exist for the components of the knitting mechanism
+* [Teardown](#teardown) of a commercial unit has been performed
+* A functional crank and [motor attachment](#crank-motor-attachment) for automated knitting has been tested with existing commercial unit
+* [*Untested 3d-models*](#in-development) exist for the components of the knitting mechanism
 
 If you want a functional open-source knitting machine that you can make *right now*,
 you should have a look at [Circular Knitic](http://www.instructables.com/id/Circular-Knitic/) or
