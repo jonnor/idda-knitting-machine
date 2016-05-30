@@ -2,18 +2,52 @@
 
 Idda is a project to develop an open-source 3d-printable circular knitting machine.
 
-Features
+We aim for a cheap hobby-grade knitting machine, that can be used to produce clothing (or parts for),
+as well as fabric for technical use. It will be similar to existing commercial units,
+but also be adaptable to make different fabric sizes and using different materials - and support automation.
 
-* 22 or 46 needle. 
-* Can create circular and rectangular swatches (using back-and-forth knit)
-* Max swatch for 46 needle: 17.75 inch
-* Manual cast-on and bind-off
-* Manual forwarding
+As a side-effect of developing, we're also creating replacement parts and modifications
+for existing commercial units, as well as tools that are useful for any kind of (circular knitting) machine.
 
-Motivation
+# Status
+**Prototyping**
 
-* Be able to replicate using distributed digital manufacturing (3d-print/CNC)
-* Be able to customize. Different number of needles, needle/mask size, adapting to different materials, adding automation
+* Teardown of a commercial unit has been performed
+* A functional crank and motor attachment for automated knitting has been tested with existing commercial unit
+* *Untested 3d-models* exist for the components of the knitting mechanism
+
+If you want a functional open-source knitting machine that you can make *right now*,
+you should have a look at [Circular Knitic](http://www.instructables.com/id/Circular-Knitic/) or
+the [OpenKnit](http://openknit.org/) linear/flatbed knitting machine.
+
+If you don't care about the machine being open-source or customizable, then you can
+buy these kind of machines cheaply from [many manufactures](#background) right now.
+
+# TODO
+
+v0.1: First prototype
+
+* Needle: Test 3d-printability, including best print direction and possible
+* Needle: Adapt and test using as replacement in commercial unit
+* Track: Adapt the track path to be a V-shape, as found in the commerical units
+* Test motion of fully 3d-printed track+needle+cylinder together
+* Track: Make the actual track be circular
+* Model the circular rack, used to drive the cylinder around. Connects to existing crankaxel
+* Model a basic outer body/shell
+
+v1.0: First fully-working manual version
+
+* Tweak for printability, including speed
+* Model some feet for body to stand on
+* Parametric model, tested in couple different sizes
+
+v2.0: Fully-working automated version
+
+* Add parts needed for motor drive, including electronics and software
+
+Later
+
+* Automated plain-knitting using end-stops/encoder
 
 # License
 
@@ -41,44 +75,6 @@ You are free to:
 
 Please attribute by linking to this Github repository: `https://github.com/jonnor/idda-knitting-machine`.
 
-
-# Status
-**Prototyping**
-
-* Teardown of a commercial unit has been performed
-* A functional crank and motor attachment for automated knitting has been tested with existing commercial unit
-* Untested 3d-models exist for the components of the knitting mechanism
-
-If you want a functional open-source knitting machine that you can make *right now*,
-you should have a look at [Circular Knitic](http://www.instructables.com/id/Circular-Knitic/) or
-the [OpenKnit](http://openknit.org/) linear/flatbed knitting machine.
-
-# TODO
-
-v0.1: First prototype
-
-* Needle: Test 3d-printability, including best print direction and possible
-* Track: Adapt the track path to be a V-shape, as found in commerical units
-* Test track+needle+cylinder motion together
-* Track: Make the actual track be circular
-* Model the circular rack, used to drive the cylinder around. Connects to existing crank
-* Model a basic outer body/shell
-
-v1.0: First fully-working manual version
-
-* Tweak for printability, including speed
-* Model some feet for body to stand on
-* Parametric model, tested in couple different sizes
-
-v2.0: Fully-working automated version
-
-* Add parts needed for motor drive, including electronics and software
-
-Later
-
-* Automated plain-knitting using end-stops/encoder
-
-
 # In development
 
 There are some FreeCAD source files included here.
@@ -93,13 +89,7 @@ There are some FreeCAD source files included here.
 
 ## Background
 
-The project was initially started at CCC31 in December 2014, where Hong Phuc presented
-[Let’s build our own personalized open textile production line](https://media.ccc.de/v/31c3_-_6447_-_en_-_saal_6_-_201412271400_-_let_s_build_our_own_personalized_open_textile_production_line_-_hong_phuc_dang)
-([on YouTube](https://www.youtube.com/watch?v=n0FZdl7LBbk)), calling for open-source machines.
-
-At that time the Circular Knitic had not been announced yet.
-
-The machines are now sold by a number of manufacturers under various names, including
+Hobby circular knitting machines are now sold by a number of manufacturers under various names, including
 `Addi Express`, `Innovations Knitting machine`, `Singer Knitting Machine`,
 `Barbie / Mattel Knitting machine`, `PRYM Strickmühle` and generic `DIY scarf hat knitting machine`.
 
@@ -111,6 +101,15 @@ This needle type and mechanism is described in the original Mattel patent,
 [US3983719 A: Knitting needle](http://www.google.com/patents/US3983719) from 1976 (now long expired).
 
 The machine is also similaries to [US 6276986 B1: Toy knitting machine](http://www.google.com/patents/US6276986) (lapsed).
+
+## History
+
+The project was initially started at CCC31 in December 2014,
+where Hong Phuc presented [Let’s build our own personalized open textile production line](https://media.ccc.de/v/31c3_-_6447_-_en_-_saal_6_-_201412271400_-_let_s_build_our_own_personalized_open_textile_production_line_-_hong_phuc_dang)
+([on YouTube](https://www.youtube.com/watch?v=n0FZdl7LBbk)), calling for open-source machines.
+Based on pictures and videos available on the internet, the basic mechanism was reverse engineered and modelled.
+
+It was not until May 2016, that we actually got hands on a unit and started making functional parts and testing them.
 
 ## Related projects
 
@@ -241,13 +240,17 @@ Might be worthwhile to go up a little bit in thickness for less flexibility.
 
 Alternatively one can buy it, ie [from Robodigg](http://www.robotdigg.com/product/282).
 
-### Ideas
+## Ideas
 
-* 3d-printable replacement needles
-* End-stops for crank-motor, to support automated plain-knitting
+## Automation
+
+* Add end-stops for crank-motor, to support automated plain-knitting.
+Alternative is to use an encoder mechanism, which may be useful also for other things.
+Linear type knitting machines seem to
 * Automated swapping of thread, by fusing/tying one yarn to another.
 * Programmable moving of thread guide position. For automatic cast-on/off.
 If able to manipulate 2 threads can do color patterns (like Fairisl).
+
 
 ## Tools
 
