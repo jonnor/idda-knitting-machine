@@ -1,9 +1,6 @@
+# Idda: A 3d-printable circular knitting machine
 
-Idda: A circular knitting machine
-==================
-
-Reverse engineered from modern circular knitting machines made from injection-molded plastic,
-like the [Addi Express](https://www.google.no/?#q=addi+express).
+Idda is a project to develop an open-source 3d-printable circular knitting machine.
 
 Features
 
@@ -18,22 +15,71 @@ Motivation
 * Be able to replicate using distributed digital manufacturing (3d-print/CNC)
 * Be able to customize. Different number of needles, needle/mask size, adapting to different materials, adding automation
 
-Status
---------
-**Paused**
+# License
 
-The [Circular Knitic](http://www.varvarag.info/circular-knitic)
-[(Github)](https://github.com/var-mar/circular_knitic)
-[(docs)](http://issuu.com/marcanet/docs/circular_knitic_documentation)
-is an open source functional implementation of the same mechanism as Idda.
+Idda is primarily licensed under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+By providing pull requests you agree that your work can be distributed this license.
 
-We propose that further development is done as improvements to the base provided by the Circular Knitic.
-For instance allowing it to be:
+**Note that some files are currently derivatives of files licensed as CC-BY-SA**, and are thus also under CC-BY-SA.
 
-* Configured for different sizes
-* Be reproducable with only one digital fabrication machine (need only 3d-print OR laser/CNC)
-* Use less special parts (like steel needles and aluminum profiles)
-* Improve the portability
+
+You are free to:
+```
+    Share — copy and redistribute the material in any medium or format
+    Adapt — remix, transform, and build upon the material - for any purpose, even commercially.
+
+    The licensor cannot revoke these freedoms as long as you follow the license terms.
+```
+    Under the following terms:
+```
+    Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made.
+    You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
+
+    No additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.
+
+```
+
+Please attribute by linking to this Github repository: `https://github.com/jonnor/idda-knitting-machine`.
+
+
+# Status
+**Prototyping**
+
+* Teardown of a commercial unit has been performed
+* A functional crank and motor attachment for automated knitting has been tested with existing commercial unit
+* Untested 3d-models exist for the components of the knitting mechanism
+
+If you want a functional open-source knitting machine that you can make *right now*,
+you should have a look at [Circular Knitic](http://www.instructables.com/id/Circular-Knitic/) or
+the [OpenKnit](http://openknit.org/) linear/flatbed knitting machine.
+
+# TODO
+
+v0.1: First prototype
+
+* Needle: Test 3d-printability, including best print direction and possible
+* Track: Adapt the track path to be a V-shape, as found in commerical units
+* Test track+needle+cylinder motion together
+* Track: Make the actual track be circular
+* Model the circular rack, used to drive the cylinder around. Connects to existing crank
+* Model a basic outer body/shell
+
+v1.0: First fully-working manual version
+
+* Tweak for printability, including speed
+* Model some feet for body to stand on
+* Parametric model, tested in couple different sizes
+
+v2.0: Fully-working automated version
+
+* Add parts needed for motor drive, including electronics and software
+
+Later
+
+* Automated plain-knitting using end-stops/encoder
+
+
+# In development
 
 There are some FreeCAD source files included here.
 
@@ -47,9 +93,9 @@ There are some FreeCAD source files included here.
 
 ## Background
 
-The project was initially started at CCC31, where Hong Phuc presented 
+The project was initially started at CCC31 in December 2014, where Hong Phuc presented
 [Let’s build our own personalized open textile production line](https://media.ccc.de/v/31c3_-_6447_-_en_-_saal_6_-_201412271400_-_let_s_build_our_own_personalized_open_textile_production_line_-_hong_phuc_dang)
-([on YouTube](https://www.youtube.com/watch?v=n0FZdl7LBbk)), calling for open-source.
+([on YouTube](https://www.youtube.com/watch?v=n0FZdl7LBbk)), calling for open-source machines.
 
 At that time the Circular Knitic had not been announced yet.
 
@@ -65,6 +111,21 @@ This needle type and mechanism is described in the original Mattel patent,
 [US3983719 A: Knitting needle](http://www.google.com/patents/US3983719) from 1976 (now long expired).
 
 The machine is also similaries to [US 6276986 B1: Toy knitting machine](http://www.google.com/patents/US6276986) (lapsed).
+
+## Related projects
+
+One can use open-source software to knit
+[.JPG patterns on Brother KH-930e](https://www.youtube.com/watch?v=GhnTSWMMtdU&index=3&list=LLB9kP5NQGu0JLWa9UlkxklQ),
+by emulating a serial floppy drive with a modified USB-serial adapter.
+
+[Knitic](http://knitic.com/) project has developed open-source replacement electronics for Brother flatbed knitting machines,
+in the project ([demo video](https://www.youtube.com/watch?v=ShXOvGzu60U)).
+
+[AYAB - all yarns are beautiful](http://ayab-knitting.com/) provides hardware kits and software
+for making Brother KH-family computer-controlled.
+
+[KnitWeb](https://github.com/fossasia/knitweb) by [FashionTec](https://fashiontec.wordpress.com/)
+provides a graphical user interface for creating knitting patterns, and sending them to knitting machine.
 
 
 ## How to use
@@ -255,6 +316,8 @@ by emulating a serial floppy drive with a modified USB-serial adapter.
 
 ## Stiching
 
+Theory behind knitting in general
+
 * Weft versus waft
 * Single knit types: knit, tuck, float  [video](https://www.youtube.com/watch?v=mWB8JReKTuY).
 * Tuck gives a mesh-like appearance. Used for instance for pique shirts
@@ -265,11 +328,11 @@ For instance on a circularg knitting machine, one set forms a disc, pointing out
 Alternatively on a linear V-bed machine, two flatbeds form a V, each side with a separate needle set.
 * [Rib-gated](https://www.youtube.com/watch?v=wMvjGS8dQpU) knits. 1x1 and 2x2.
 
-
 ## Needles
 
-The Addi-style machines uses a plain hook needle, and there is a V in the.
-Most other types of machines requires other, more advanced needles. Even the Circular Knitic seems to use latched needles.
+The Addi-style machines uses a plain hook needle, and there is a V in the body where the loop sits while the needle goes through.
+Most other types of knitting machines requires other, more advanced needles.
+Even the Circular Knitic seems to use latched needles.
 Currently such needles are speciality parts. Being able to 3d-print would make the machines more reproducable.
 
 How the different needle types work
