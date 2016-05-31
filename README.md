@@ -1,4 +1,3 @@
-# Idda: A 3d-printable circular knitting machine
 
 Idda is a project to develop an open-source 3d-printable circular knitting machine.
 
@@ -8,6 +7,9 @@ but also be adaptable to make different fabric sizes and using different materia
 
 As a side-effect of developing, we're also creating replacement parts and modifications
 for existing commercial units, as well as tools that are useful for any kind of (circular knitting) machine.
+
+We've started reverse engineering and modified a commercial unit.
+Here the crank is 3d-printed, and a 3d-printed + laser-cut motor attachment has been added for automated knitting:
 
 ![Generic circular knitting machine modified for automation using 3d-printed parts](./doc/automated-machine-mod-small.png)
 
@@ -197,8 +199,6 @@ Similar two-point connection was found in the axel connector for the crank.
 ![Needle](./doc/teardown/needle.jpg)
 
 ![Top ring with some needles](./doc/teardown/topring.jpg)
-
-....
 
 
 ## Mods
