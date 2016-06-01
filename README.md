@@ -360,6 +360,7 @@ Other opensource work
 * [Knitic](http://), replacement electronics for Brother flatbed knitting machines. Streaming control via computer. [demo video](https://www.youtube.com/watch?v=ShXOvGzu60U)
 * [Becky Stern: .JPG patterns on Brother KH-930e](https://www.youtube.com/watch?v=GhnTSWMMtdU&index=3&list=LLB9kP5NQGu0JLWa9UlkxklQ),
 by emulating a serial floppy drive with a modified USB-serial adapter.
+* [The TwitterKnitter](https://eirebecky.wordpress.com/2013/08/02/the-twitterknitter/), software-controller knitting by emulating punchcards using some lasercut parts and servos.
 
 ## Stiching
 
