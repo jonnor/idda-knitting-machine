@@ -1,5 +1,30 @@
 
-Idda is a project to develop an open-source 3d-printable circular knitting machine.
+Idda was a project to develop an open-source 3d-printable circular knitting machine.
+
+# Status
+**Not Active since 2016**
+
+# Machines made by others
+
+For *Circular Sock Knitting Machines*, there are now at least 2 functional 3d-printed designs.
+[CSM: Circular Sock Knitting Machine by MrRoboto19](https://www.thingiverse.com/thing:4695746),
+and [Sock knitting machine by difl](https://www.thingiverse.com/thing:3310883/makes).
+These use off-the-shelf metal needles, but otherwise are highly fabricatable.
+
+If you want a functional open-source knitting machine that you can make *right now*,
+you should have a look at [Circular Knitic](http://www.instructables.com/id/Circular-Knitic/) or
+the [OpenKnit](http://openknit.org/) linear/flatbed knitting machine.
+
+On fully 3d-printed model, Andre Bandarra has made some headway.
+His video [How Circular Knitting Machines Work? Designing one from scratch - BANDARRA](https://www.youtube.com/watch?v=yM4Rb0DTyKU)
+shows some of design and progress.
+The needle designs there are much more 3d-printer friendly than what exists in this project.
+However there is still a lot of tuning needed to get a functional design.
+
+If you don't care about the machine being open-source or customizable, then you can
+buy these kind of machines cheaply from [many manufactures](#background) right now.
+
+# Project
 
 We aim for a cheap hobby-grade knitting machine, that can be used to produce clothing (or parts for),
 as well as fabric for technical use. It will be similar to existing commercial units,
@@ -13,19 +38,12 @@ Here the crank is 3d-printed, and a 3d-printed + laser-cut motor attachment has 
 
 ![Generic circular knitting machine modified for automation using 3d-printed parts](./doc/automated-machine-mod-small.png)
 
-# Status
-**Prototyping**
+# DONE
 
 * [Teardown](#teardown) of a commercial unit has been performed
 * A functional crank and [motor attachment](#crank-motor-attachment) for automated knitting has been tested with existing commercial unit
 * [*Untested 3d-models*](#in-development) exist for the components of the knitting mechanism
 
-If you want a functional open-source knitting machine that you can make *right now*,
-you should have a look at [Circular Knitic](http://www.instructables.com/id/Circular-Knitic/) or
-the [OpenKnit](http://openknit.org/) linear/flatbed knitting machine.
-
-If you don't care about the machine being open-source or customizable, then you can
-buy these kind of machines cheaply from [many manufactures](#background) right now.
 
 # TODO
 
